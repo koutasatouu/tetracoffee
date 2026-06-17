@@ -3,7 +3,7 @@ import { Menu, X, ArrowRight, MapPin, ChevronRight } from "lucide-react";
 import BlurText from "./components/BlurText";
 import BorderGlow from "./components/BorderGlow";
 import CardNav from "./components/CardNav";
-import MenuFlipbook from "./components/MenuFlipbook";
+import TextMenuReader from "./components/TextMenuReader";
 import ColorBends from "./components/ColorBends";
 
 const FadeInSection = ({ children }) => {
@@ -64,22 +64,17 @@ const TetraLogo = ({ className = "w-10 h-10" }) => (
 const menuData = {
   coffee: [
     {
-      name: "Terranova Cold Brew",
-      desc: "Smooth, low-acidity cold brew using our signature house blend.",
-      price: "30k",
-      img: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&q=80&w=800",
-      ingredients: [
-        "150ml purely steeped house blend",
-        "70% Arabica Brazil Natural",
-        "30% Arabica Papandayan Wash",
-        "Taste Notes: Orange, Chocolate, Nutty",
-      ],
+      name: "Dirty Latte",
+      desc: "Artistic, layered coffee drink made by slowly pouring a hot, bold shot of espresso (or ristretto) over chilled milk without ice.",
+      price: "31k",
+      img: "/img/dirtylatte.webp",
+      ingredients: ["..."],
     },
     {
-      name: "Es Kopi At Terra",
-      desc: "Our signature es kopi made with magic milk, espresso, and brown sugar.",
-      price: "24k",
-      img: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=800",
+      name: "Cold Brew Terranova",
+      desc: "A smooth, rich, and refreshing cold brew coffee made with our signature Terranova blend.",
+      price: "29k",
+      img: "/img/coldbrewterranova.webp",
       ingredients: ["Magic Milk", "Signature Espresso", "Liquid Brown Sugar"],
     },
     {
@@ -98,7 +93,7 @@ const menuData = {
       name: "Es Kopi Regal",
       desc: "No. 1 eskopi regal in Indonesia. Topped with famous regal biscuit.",
       price: "28k",
-      img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&q=80&w=800",
+      img: "https://coffeeland.co.id/wp-content/uploads/2019/08/66704453_1406772666142147_5969864300346020653_n-1.jpg",
       ingredients: [
         "Espresso",
         "Slow Mixed Milk",
@@ -110,7 +105,7 @@ const menuData = {
       name: "Es Kopi Biscoff",
       desc: "Magic milk, espresso magic, topped with famous biscuit lotus biscoff.",
       price: "27k",
-      img: "https://images.unsplash.com/photo-1557006021-b85faa2ca253?auto=format&fit=crop&q=80&w=800",
+      img: "https://i0.wp.com/yesmooretea.com/wp-content/uploads/2020/07/Tea-Leaves-Boba-Kit-796x1024.jpg?resize=796%2C1024&ssl=1",
       ingredients: [
         "Magic Milk",
         "Magic Espresso",
@@ -132,7 +127,7 @@ const menuData = {
       name: "Es Kopi Rum",
       desc: "Magic milk, magic espresso, and rum drops.",
       price: "28k",
-      img: "https://images.unsplash.com/photo-1499744632587-7798360ba20f?auto=format&fit=crop&q=80&w=800",
+      img: "https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1591182744/mgdo9iiap8wve5zwuacp.jpg",
       ingredients: [
         "Magic Milk",
         "Magic Espresso",
@@ -198,10 +193,10 @@ const menuData = {
       ],
     },
     {
-      name: "Homecoming Mocktail",
-      desc: "Premium chocolate, cherry, brown spice topped with coconut protein cream.",
-      price: "32k",
-      img: "https://images.unsplash.com/photo-1544145945-f90427840980?auto=format&fit=crop&q=80&w=800",
+      name: "Ice Rose Americano",
+      desc: "Espresso, rose extract, and ice cubes.",
+      price: "36k",
+      img: "/img/iceroseamericano.webp",
       ingredients: [
         "Premium Chocolate",
         "Cherry & Brown Spice",
@@ -250,7 +245,7 @@ const menuData = {
       name: "Ribs & Macaroni",
       desc: "Creamy Macaroni and BBQ Ribs.",
       price: "80k",
-      img: "https://images.unsplash.com/photo-1544025162-81111421550a?auto=format&fit=crop&q=80&w=800",
+      img: "https://cdn.sunbasket.com/92bb6f5d-67a4-4faa-8ddb-a0d0174f1a8f.jpg",
       ingredients: [
         "Slow-cooked Beef Ribs",
         "Signature BBQ Glaze",
@@ -273,7 +268,7 @@ const menuData = {
       name: "Saikoro Rice Bowl",
       desc: "Rice, Saikoro Beef Bbq Sauce and Scramble egg.",
       price: "48k",
-      img: "https://images.unsplash.com/photo-1644704386762-d9ee00df0b25?auto=format&fit=crop&q=80&w=800",
+      img: "https://www.lemon8-app.com/seo/image?item_id=7379447120291480065&index=0&sign=e62ce7a27c9b6ed55771e43947619a08",
       ingredients: [
         "Premium Saikoro Wagyu Beef cubes",
         "Sweet & Savory BBQ Sauce",
@@ -285,7 +280,7 @@ const menuData = {
       name: "Nasi Iga Penyet",
       desc: "Beef short ribs with chilli and steamed rice.",
       price: "61k",
-      img: "https://images.unsplash.com/photo-1606850246029-dd00e1279aee?auto=format&fit=crop&q=80&w=800",
+      img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9UoLw_4tawfgjfwxBSfA1munKL77-92ZcFKnYkfnCdCIb0TUkeusC9EvApIYnasRRWQX3wfZ_WbtNQmiTkhOB6DXALmPdRRbNMOv-Ad8Eqz3sKQ9mHN1yDZW20-50OKGy5KoEQUc_O8o/s1350/214104328_128454656100190_1391601930047966614_n.jpg",
       ingredients: [
         "Fried Beef Short Ribs",
         "Traditional Chilli Paste (Sambal)",
@@ -296,7 +291,7 @@ const menuData = {
       name: "Sop Buntut Sagan",
       desc: "Authentic indonesian oxtail soup served with steamed rice.",
       price: "60k",
-      img: "https://images.unsplash.com/photo-1548943487-a2e4d43b4850?auto=format&fit=crop&q=80&w=800",
+      img: "https://d12man5gwydfvl.cloudfront.net/wp-content/uploads/2020/03/shutterstock_341653109.jpg",
       ingredients: [
         "Authentic Indonesian Oxtail Soup",
         "Carrots & Potatoes",
@@ -363,7 +358,7 @@ const menuData = {
       name: "Cilok Mentai",
       desc: "Traditional cilok with spicy peanut and mentai sauce.",
       price: "26k",
-      img: "https://images.unsplash.com/photo-1626804475297-41609ea004eb?auto=format&fit=crop&q=80&w=800",
+      img: "https://img-global.cpcdn.com/recipes/d2a144307d3d55e9/680x781cq80/cilok-mentai-foto-resep-utama.jpg",
       ingredients: [
         "Chewy Tapioca Balls (Cilok)",
         "Spicy Peanut Sauce",
@@ -742,25 +737,24 @@ export default function App() {
       </section>
 
       {/* DIGITAL FLIPBOOK MENU SECTION */}
-      <section
+      {/* <section
         id="digital-menu"
         className="py-24 bg-[#0a0a0a] border-t border-zinc-900"
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <FadeInSection>
+        <div className="max-w-7xl mx-auto px-6 md:px-12"> */}
+      {/* <FadeInSection>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-5xl font-light tracking-wide mb-4">
-                Digital Menu
+                The Menu Book
               </h2>
               <p className="text-zinc-500 text-sm tracking-[0.2em] uppercase">
-                Interactive Experience
+                A Reading Experience
               </p>
             </div>
-
-            <MenuFlipbook />
-          </FadeInSection>
-        </div>
-      </section>
+            <TextMenuReader />
+          </FadeInSection> */}
+      {/* </div>
+      </section> */}
 
       {/* CONTACT / LOCATIONS SECTION */}
       <section
@@ -803,36 +797,78 @@ export default function App() {
                 OUR LOCATIONS
               </h3>
               <div className="flex flex-col gap-4 text-sm tracking-widest text-zinc-300 mb-12">
+                <div className="flex flex-wrap items-center gap-3 justify-between">
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-4 h-4 text-zinc-600" />
+                    <a
+                      href="https://maps.app.goo.gl/YbxJY9F7RL7iPRxUA"
+                      target="_blank"
+                    >
+                      Yogyakarta
+                    </a>
+                  </div>
+                </div>
+
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-zinc-600" /> Yogyakarta
+                  <MapPin className="w-4 h-4 text-zinc-600" />
+                  <a
+                    href="https://maps.app.goo.gl/Mp4qQ2Jk2UPBgChW6"
+                    target="_blank"
+                  >
+                    Cirebon
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-zinc-600" /> Cirebon
+                  <MapPin className="w-4 h-4 text-zinc-600" />
+                  <a
+                    href="https://maps.app.goo.gl/9QhnADFEfwjFb8HH9"
+                    target="_blank"
+                  >
+                    Solo
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-zinc-600" /> Solo
+                  <MapPin className="w-4 h-4 text-zinc-600" />
+                  <a
+                    href="https://maps.app.goo.gl/LLVf1EZM8z9VzTvV6"
+                    target="_blank"
+                  >
+                    Pekanbaru
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-zinc-600" /> Pekanbaru
+                  <MapPin className="w-4 h-4 text-zinc-600" />
+                  <a
+                    href="https://maps.app.goo.gl/pYbqHsCrSsXexeXZ9"
+                    target="_blank"
+                  >
+                    Surabaya
+                  </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-zinc-600" /> Surabaya
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="w-4 h-4 text-zinc-600" /> Palembang
+                  <MapPin className="w-4 h-4 text-zinc-600" />
+                  <a
+                    href="https://maps.app.goo.gl/AjfxqS47Xaa63phi6"
+                    target="_blank"
+                  >
+                    Palembang
+                  </a>
                 </div>
               </div>
 
               <div className="text-zinc-500">
                 <p className="text-xs tracking-[0.2em] mb-2 uppercase">
-                  Connect
+                  SOCIAL MEDIA
                 </p>
-                <span className="text-sm tracking-widest block">
-                  IG: @tetracoffee_
-                </span>
-                <span className="text-sm tracking-widest block mt-2">
-                  HELLO@TETRACOFFEE.COM
-                </span>
+                <a
+                  href="https://www.instagram.com/tetracoffee_/"
+                  target="_blank"
+                  className="hover:text-white transition-colors"
+                >
+                  <span className="text-sm tracking-widest block">
+                    @tetracoffee_
+                  </span>
+                </a>
               </div>
             </div>
           </div>
